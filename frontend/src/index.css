@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#1a1a2e] text-slate-200 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-[#24243e]/60 backdrop-blur-lg border border-white/5 rounded-[2.5rem] transition-all duration-300;
+  }
+  
+  .glass-card-dark {
+    @apply bg-[#16162a]/80 border border-white/5 rounded-[2.5rem];
+  }
+
+  .sidebar-item-active {
+    @apply bg-[#6c5ce7] text-white shadow-lg shadow-[#6c5ce7]/30;
+  }
+
+  .btn-purple {
+    @apply bg-[#6c5ce7] hover:bg-[#5b4bc4] text-white font-bold py-3 px-6 rounded-2xl transition-all shadow-lg shadow-[#6c5ce7]/20;
+  }
+
+  .input-search {
+    @apply bg-[#24243e] border-none rounded-2xl py-2 px-4 text-sm text-slate-300 focus:outline-none focus:ring-2 focus:ring-[#6c5ce7]/50;
+  }
+
+  .status-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+}
+
+/* Custom palette colors from image */
+.bg-pink-accent { background-color: #ff7eb3; }
+.bg-blue-accent { background-color: #00f2ff; }
+.bg-purple-accent { background-color: #6c5ce7; }
+.bg-orange-accent { background-color: #f39c12; }
+.bg-green-accent { background-color: #2ecc71; }
+
+.text-pink-accent { color: #ff7eb3; }
+.text-blue-accent { color: #00f2ff; }
+.text-purple-accent { color: #6c5ce7; }
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full;
+}
